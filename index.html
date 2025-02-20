@@ -2,14 +2,20 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character set and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Effiong Uyo: My Resume</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
     
+    <!-- Title of the web page displayed in the browser tab -->
+    <title>Effiong Uyo: My Resume</title>
+    
+    <!-- Linking to external CSS files for styling -->
+    <link rel="stylesheet" href="css/reset.css"> <!-- Resets default styles across browsers -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Custom styles for this resume -->
+</head>
+
+<body>
+    <!-- Main header section, contains divs for layout purposes -->
     <header class="headermain">
         <div class="div-1"></div>
         <div class="div-2"></div>
@@ -19,47 +25,67 @@
         <div class="div-6"></div>
     </header>
 
+    <!-- Navigation bar with links to different sections of the resume -->
     <nav>
         <ul class="nav-links">
-          <li><a href="#skills">My Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+            <li><a href="#skills">My Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
+        <!-- Hamburger menu for mobile responsiveness -->
         <div class="menu-toggle">☰</div>
     </nav>
     
+    <!-- Main heading for the resume -->
     <h1>Effiong Uyo's Resume</h1>
+    
+    <!-- Section for the profile photo -->
     <div class="photo"></div>
     
+    <!-- Introduction section with a brief bio -->
     <section class="first">
-        <p class="intro">My name is Effiong Isele-Neke Uyo. <br>I am a Nigerian Student currently studying Software Engineering at African Leadership University</p>
+        <p class="intro">
+            My name is Effiong Isele-Neke Uyo. <br>
+            I am a Nigerian Student currently studying Software Engineering at African Leadership University.
+        </p>
     </section>
     
+    <!-- Adding some spacing with line breaks (though this can be improved with CSS) -->
     <p><br></p>
     <p><br></p>
 
+    <!-- Skills section, listing key skills -->
     <section class="skills">
         <h2> My Skills are:</h2>
         <ul>
-          <li>Mathematical reasoning and quantitative analysis</li>
-          <li>Learning Javascript</li>
-          <li>Learning Python</li>
+            <!-- List of skills -->
+            <li>Mathematical reasoning and quantitative analysis</li>
+            <li>Learning Javascript</li>
+            <li>Learning Python</li>
         </ul>
     </section>
 
+    <!-- Adding more spacing -->
     <p><br></p>
     <p><br></p>
 
+    <!-- Contact section, providing ways to get in touch -->
     <section class="contact">
         <h3> Contact Info:</h3>
+        <!-- Displaying work email -->
         <p> My work email is : e.uyo@alustudent.com </p>
+        
+        <!-- External links to GitHub and LinkedIn profiles -->
         <p> You can find my work on my <a target="_blank" href="https://github.com/Effiong06" title="This takes you to my Github account">Github</a></p>
         <p> Lastly, this is my LinkedIn profile: <a target="_blank" href="https://www.linkedin.com/in/Effiong-Uyo" title="My LinkedIn, of course">Effiong Uyo - LinkedIn</a></p>
     </section>
 
+    <!-- Footer section, displaying author's name and year -->
     <footer>
         <p> Uyo, Effiong I., 2025</p>
     </footer>
 
+    <!-- Linking to external JavaScript file (make sure script is defer to avoid blocking page load) -->
     <script defer src="scripts/scripts.js"></script>
 </body>
+
 </html>

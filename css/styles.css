@@ -1,22 +1,27 @@
 /* The main CSS stylesheet */
+
+/* Header section styles - Creating a flexbox layout for the header */
 .headermain {
-    display: flex;
-    width: 100%;
+    display: flex; /* Flexbox enables the child divs to be displayed in a row */
+    width: 100%;   /* The header takes up the full width of the page */
 }
 
+/* Define height for each div inside the header */
 .headermain div {
     height: 65px;
 }
 
+/* Setting width for all six divs inside the header to ensure they take up equal space */
 .headermain .div-1,
 .headermain .div-2,
 .headermain .div-3,
 .headermain .div-4,
 .headermain .div-5,
 .headermain .div-6 {
-    width: 16.66%;
+    width: 16.66%; /* Each div takes up 1/6 of the available width */
 }
 
+/* Assigning individual background colors to each of the header divs */
 .headermain .div-1 { background-color: #B224F9; }
 .headermain .div-2 { background-color: #8962F5; }
 .headermain .div-3 { background-color: #1F39FA; }
@@ -24,166 +29,187 @@
 .headermain .div-5 { background-color: aquamarine; }
 .headermain .div-6 { background-color: #13F507; }
 
+/* Navigation menu styles */
 .nav-links {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    margin: 0;
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Makes the nav items align horizontally */
+    justify-content: space-around; /* Distributes items evenly */
+    margin: 0; /* Removes any default margin */
 }
 
+/* Adds padding around each list item in the navigation */
 .nav-links li {
     padding: 10px;
 }
 
+/* Styles for the menu toggle (hamburger icon) - hidden by default */
 .menu-toggle {
-    display: none;
-    cursor: pointer;
+    display: none; /* Hide the menu toggle icon */
+    cursor: pointer; /* Changes cursor to indicate it's clickable */
 }
 
-/* Media query for small screens */
+/* Media query for smaller screens (max width of 768px) for responsive design */
 @media (max-width: 768px) {
+    /* When the screen is small, hide the nav links by default */
     .nav-links {
         display: none;
-        flex-direction: column;
+        flex-direction: column; /* Arrange the nav links vertically */
         position: absolute;
-        top: 50px;
-        background-color: #333;
+        top: 50px; /* Positions the dropdown below the navbar */
+        background-color: #333; /* Dark background for mobile menu */
         width: 100%;
-        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out; /* Smooth animation for menu appearance */
     }
 
+    /* Show the nav links when the 'active' class is added (for mobile toggle) */
     .nav-links.active {
         display: flex;
     }
 
+    /* Make the hamburger menu visible on small screens */
     .menu-toggle {
-        display: block;
+        display: block; /* Show the menu icon on small screens */
         font-size: 30px;
-        color: white;
+        color: white; /* White color for the icon */
     }
 
+    /* Styling each list item in the mobile navigation */
     .nav-links li {
         text-align: center;
         padding: 15px;
-        width: 100%;
-        background-color: #333;
-        color: white;
+        width: 100%; /* Makes each nav item take full width */
+        background-color: #333; /* Dark background for each link */
+        color: white; /* Text color for nav items */
     }
 
+    /* Styling the links within the list items */
     .nav-links li a {
         color: white;
-        text-decoration: none;
+        text-decoration: none; /* Removes the underline from links */
     }
 
+    /* Hover effect for nav items */
     .nav-links li:hover {
-        background-color: #444;
+        background-color: #444; /* Darker background when hovering */
     }
 }
 
+/* Global body styles */
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 19px;
+    margin: 0; /* Removes default margin */
+    font-family: Arial, Helvetica, sans-serif; /* Sets the font for the page */
+    font-size: 19px; /* Base font size for text */
 }
 
+/* Main heading style */
 h1 {
-    font-family: 'Times New Roman', Times, serif;
-    color: teal;
-    font-size: 45px;
-    font-style: italic;
-    font-weight: bolder;
-    text-decoration: underline;
-    text-align: center;
+    font-family: 'Times New Roman', Times, serif; /* Elegant serif font */
+    color: teal; /* Sets the text color */
+    font-size: 45px; /* Font size for the heading */
+    font-style: italic; /* Italicizes the heading */
+    font-weight: bolder; /* Makes the text bolder */
+    text-decoration: underline; /* Underlines the heading */
+    text-align: center; /* Centers the heading */
 }
 
+/* Skills section styles */
 .skills h2 {
-    font-family: 'Times New Roman', Times, serif;
-    color: #0732F5;
-    font-size: 25px;
-    font-style: oblique;
-    font-weight: bolder;
-    text-decoration: wavy;
-    margin-left: 100px;
+    font-family: 'Times New Roman', Times, serif; /* Elegant font for subheading */
+    color: #0732F5; /* Sets color for the subheading */
+    font-size: 25px; /* Font size for the subheading */
+    font-style: oblique; /* Makes the text slanted */
+    font-weight: bolder; /* Makes the text bolder */
+    text-decoration: wavy; /* Adds a wavy underline to the subheading */
+    margin-left: 100px; /* Adds left margin to move it away from the edge */
 }
 
+/* List styles for skills section */
 .skills ul {
-    list-style-type: square;
-    padding-left: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #05969D;
-    margin-top: 20px;
-    margin-left: 130px;
+    list-style-type: square; /* Square bullet points for the list */
+    padding-left: 20px; /* Adds padding on the left of the list */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Sets a modern sans-serif font */
+    color: #05969D; /* Sets text color */
+    margin-top: 20px; /* Adds space above the list */
+    margin-left: 130px; /* Moves the list to the right */
 }
 
+/* Styles for each list item in the skills section */
 .skills li {
-    font-size: 16px;
-    margin: 5px 0;
+    font-size: 16px; /* Font size for each skill item */
+    margin: 5px 0; /* Adds vertical margin between list items */
 }
 
+/* Contact section styles */
 .contact h3 {
-    font-family: 'Times New Roman', Times, serif;
-    color: #0b4941;
+    font-family: 'Times New Roman', Times, serif; /* Serif font for the contact heading */
+    color: #0b4941; /* Dark greenish color */
     font-size: 25px;
-    font-style: oblique;
+    font-style: oblique; /* Slanted text */
     font-weight: bolder;
-    text-decoration: wavy;
-    margin-left: 100px;
+    text-decoration: wavy; /* Adds wavy underline */
+    margin-left: 100px; /* Moves the heading to the right */
 }
 
+/* Paragraph styling for the contact section */
 .contact p {
-    color: #057437;
-    margin-left: 130px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #057437; /* Sets a green color for text */
+    margin-left: 130px; /* Moves the text to the right */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Strong, bold font */
 }
 
+/* Link styling within contact section */
 .contact p a {
-    color: #640888;
-    cursor: pointer;
+    color: #640888; /* Sets purple color for links */
+    cursor: pointer; /* Makes the link clickable */
 }
 
-/* Ensuring the photo container takes full width while being responsive */
+/* Styling the photo container */
 .photo {
-    width: 100%;
-    max-width: 500px; /* Limiting the max width of the photo */
-    height: 300px; /* Set a fixed height to prevent it from shrinking too much */
-    padding: 10px;
-    border: 10px solid teal;
+    width: 100%; /* Takes up the full width of the container */
+    max-width: 500px; /* Limits the width to 500px */
+    height: 300px; /* Fixed height for the photo container */
+    padding: 10px; /* Adds padding inside the container */
+    border: 10px solid teal; /* Adds a border around the photo */
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the image inside the container */
     align-items: center;
-    margin: 50px auto;
-    background-color: turquoise;
-    background-image: url(../images/myphoto.jpg);
+    margin: 50px auto; /* Adds space above and below the photo */
+    background-color: turquoise; /* Sets a background color */
+    background-image: url(../images/myphoto.jpg); /* Background image for the container */
     background-size: cover; /* Ensures the background image covers the area */
-    background-repeat: no-repeat;
-    background-position: center;
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
 }
 
+/* Ensures the image fits within the photo container */
 .photo img {
-    width: 100%; /* Makes the image stretch to fill the container */
-    height: 100%; /* Ensures the image is tall enough to fill the container */
+    width: 100%;
+    height: 100%;
     object-fit: cover; /* Makes sure the image covers the div without distortion */
-    position: absolute; /* Ensure the image is in the background */
-    z-index: 1;
+    position: absolute; /* Keeps the image in the background */
+    z-index: 1; /* Ensures the image stays behind other content */
 }
 
+/* Hover effect for photo container (change image on hover) */
 .photo:hover {
-    background-image: url(../images/myphotovint.jpg); /* Optional: image change on hover */
+    background-image: url(../images/myphotovint.jpg); /* Image changes on hover */
 }
 
-
+/* Intro paragraph styling */
 .intro {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* Serif font */
     font-size: 20px;
-    color: mediumslateblue;
+    color: mediumslateblue; /* Color for the text */
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 50px; /* Adds space from the left */
 }
 
+/* Footer styles */
 footer {
     padding: 10px;
-    background-color: #2e2e2e;
-    text-align: center;
-    margin-top: 60px;
+    background-color: #2e2e2e; /* Dark background for the footer */
+    text-align: center; /* Centers the text in the footer */
+    margin-top: 60px; /* Adds space above the footer */
 }
+
