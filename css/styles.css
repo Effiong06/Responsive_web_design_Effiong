@@ -1,0 +1,189 @@
+/* The main CSS stylesheet */
+.headermain {
+    display: flex;
+    width: 100%;
+}
+
+.headermain div {
+    height: 65px;
+}
+
+.headermain .div-1,
+.headermain .div-2,
+.headermain .div-3,
+.headermain .div-4,
+.headermain .div-5,
+.headermain .div-6 {
+    width: 16.66%;
+}
+
+.headermain .div-1 { background-color: #B224F9; }
+.headermain .div-2 { background-color: #8962F5; }
+.headermain .div-3 { background-color: #1F39FA; }
+.headermain .div-4 { background-color: #14D3F5; }
+.headermain .div-5 { background-color: aquamarine; }
+.headermain .div-6 { background-color: #13F507; }
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.nav-links li {
+    padding: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        background-color: #333;
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: white;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        background-color: #333;
+        color: white;
+    }
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links li:hover {
+        background-color: #444;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 19px;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: teal;
+    font-size: 45px;
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.skills h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #0732F5;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: wavy;
+    margin-left: 100px;
+}
+
+.skills ul {
+    list-style-type: square;
+    padding-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #05969D;
+    margin-top: 20px;
+    margin-left: 130px;
+}
+
+.skills li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #0b4941;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bolder;
+    text-decoration: wavy;
+    margin-left: 100px;
+}
+
+.contact p {
+    color: #057437;
+    margin-left: 130px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.contact p a {
+    color: #640888;
+    cursor: pointer;
+}
+
+/* Ensuring the photo container takes full width while being responsive */
+.photo {
+    width: 100%;
+    max-width: 500px; /* Limiting the max width of the photo */
+    height: 300px; /* Set a fixed height to prevent it from shrinking too much */
+    padding: 10px;
+    border: 10px solid teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    background-color: turquoise;
+    background-image: url(../images/myphoto.jpg);
+    background-size: cover; /* Ensures the background image covers the area */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.photo img {
+    width: 100%; /* Makes the image stretch to fill the container */
+    height: 100%; /* Ensures the image is tall enough to fill the container */
+    object-fit: cover; /* Makes sure the image covers the div without distortion */
+    position: absolute; /* Ensure the image is in the background */
+    z-index: 1;
+}
+
+.photo:hover {
+    background-image: url(../images/myphotovint.jpg); /* Optional: image change on hover */
+}
+
+
+.intro {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: mediumslateblue;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+footer {
+    padding: 10px;
+    background-color: #2e2e2e;
+    text-align: center;
+    margin-top: 60px;
+}

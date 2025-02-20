@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: teal;
+    font-size: 45px;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+
+}
+
+
+.photo {
+    width: 500px;  /* Make sure width is fixed */
+    height: 450px; /* Make sure height is fixed */
+    padding: 10px;
+    border: 10px solid teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto; /* Center the div on the page */
+    background-color: turquoise;
+    background-image: url('images/myphoto.jpg'); /* Default image for background */
+    background-size: cover;  /* Ensures the image covers the space without distortion */
+    background-repeat: no-repeat;
+    background-position: center;  /* Center the image */
+    cursor: pointer;
+}
+
+.photo img {
+    width: 100%; /* Makes the image fill the container */
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    position: absolute; /* Position image over background */
+    z-index: 1; /* Ensure image is on top */
+}        
+.photo:hover {
+    background-image: url(../images/myphotovint.jpg)
+}
+
+.intro {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color: mediumslateblue;
+    margin-top: 20px;
+    margin-left: 50px;
+}
